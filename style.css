@@ -81,10 +81,13 @@ nav .navlinks li a {
 }
 .container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row; /* Menyusun elemen secara horizontal */
+  justify-content: space-between; /* Beri jarak antar elemen */
+  align-items: center; /* Vertikal rata tengah */
   padding-top: 4rem;
+  flex-wrap: wrap; /* Agar konten bisa berpindah baris */
 }
+
 .container .hero-pic {
   width: 300px;
   height: 300px;
@@ -199,36 +202,37 @@ nav .navlinks li a {
 }
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    padding-top: 2rem;
+    flex-direction: column; /* Menyusun konten secara vertikal */
+    align-items: center; /* Rata tengah */
+    padding-top: 2rem; /* Padding atas */
   }
-  .hero-text {
-    padding: 40px 0px;
-  }
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 50px; /* Naikkan konten ke atas */
-    padding-bottom: 20px;
-    min-height: 80vh; /* Sesuaikan tinggi kontainer agar tidak terlalu jauh ke bawah */
+
+  .hero-pic {
+    width: 150px; /* Ukuran lebih kecil pada gambar */
+    height: 150px;
   }
 
   .hero-text {
-    flex: 1;
-    padding-top: 0; /* Kurangi padding atas jika diperlukan */
+    padding: 20px 0; /* Padding vertikal lebih kecil */
+    text-align: center; /* Teks rata tengah */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Ukuran font judul lebih kecil */
+  }
+
+  .btn-group {
+    margin-top: 20px;
   }
 }
+
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: relative; /* Mengubah posisi menjadi relatif agar tidak mengganggu konten */
   background-color: #222;
   color: #fff;
   text-align: center;
   padding: 10px 0;
   font-size: 14px;
-  z-index: 1000; /* Agar selalu di atas konten lainnya */
+  width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
