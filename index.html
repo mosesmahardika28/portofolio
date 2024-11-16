@@ -66,7 +66,7 @@
         </header>
         <div class="container">
           <div class="hero-pic">
-            <img src="images/main_photo.png" alt="profile pic" />
+            <img src="images/main_photo.svg" alt="profile pic" />
           </div>
           <div class="hero-text">
             <h5>Hi I'm <span class="input">Footballer</span></h5>
@@ -121,6 +121,13 @@
         typedSpeed: 70,
         backSpeed: 55,
         loop: true,
+      });
+
+      const toggleBtn = document.querySelector(".togglebtn");
+      const navLinks = document.querySelector(".navlinks");
+
+      toggleBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
       });
     </script>
   </body>
