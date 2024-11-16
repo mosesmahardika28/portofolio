@@ -2,109 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Moses Mahardika Nugroho</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
       rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
     <style>
       body {
-        font-family: "Roboto", sans-serif;
+        font-family: "Open Sans", sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Pastikan body memenuhi tinggi layar */
+        margin: 0;
+      }
+
+      .hero-header {
+        flex-grow: 1; /* Konten utama akan mengambil sisa ruang */
+      }
+
+      footer {
+        background-color: #2d2d2d;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
-  <body class="bg-gray-100">
-    <div class="flex flex-col lg:flex-row min-h-screen">
-      <!-- Sidebar -->
-      <div
-        class="w-full lg:w-1/4 bg-white flex flex-col items-center p-6 border-b lg:border-r border-gray-200"
-      >
-        <!-- Profile Section -->
-        <div class="text-center mb-8 flex flex-col items-center">
-          <img
-            src="fotoFormalHome.png"
-            alt="Profile picture of Moses Mahardika Nugroho"
-            class="rounded-full mb-4"
-            width="100"
-            height="100"
-          />
-          <h2 class="text-xl lg:text-2xl font-bold">Moses Mahardika Nugroho</h2>
-          <p class="text-gray-600">UI/UX Designer in Philippines</p>
-        </div>
+  <body>
+    <div class="hero-header">
+      <div class="wrapper">
+        <header>
+          <div class="logo">
+            <i class="fa-solid fa-m"></i>
+            <div class="logo-text">Moses Mahardika Nugroho</div>
+          </div>
+          <nav>
+            <div class="togglebtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="navlinks">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Resume</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="container">
+          <div class="hero-pic">
+            <img src="images/main_photo.svg" alt="profile pic" />
+          </div>
+          <div class="hero-text">
+            <h5>Hi I'm <span class="input">Footballer</span></h5>
+            <h1>Moses Mahardika Nugroho</h1>
+            <p>
+              I am a passionate football player striving to give my best on the
+              field. In addition, I am a student constantly working on
+              developing myself both academically and in sports. With experience
+              playing in various tournaments, I am determined to achieve success
+              in both areas.
+            </p>
 
-        <!-- Navigation Menu -->
-        <nav class="w-full flex-grow flex flex-col items-center justify-start">
-          <ul class="space-y-4 w-full text-center">
-            <li>
-              <a class="block text-gray-700 hover:text-blue-500" href="#"
-                >HOME</a
-              >
-            </li>
-            <li>
-              <a class="block text-gray-700 hover:text-blue-500" href="#"
-                >ABOUT</a
-              >
-            </li>
-            <li>
-              <a class="block text-gray-700 hover:text-blue-500" href="#"
-                >EXPERIENCES</a
-              >
-            </li>
-            <li>
-              <a class="block text-gray-700 hover:text-blue-500" href="#"
-                >EDUCATION</a
-              >
-            </li>
-            <li>
-              <a class="block text-gray-700 hover:text-blue-500" href="#"
-                >CONTACT</a
-              >
-            </li>
-          </ul>
-        </nav>
+            <div class="btn-group">
+              <a href="#" class="btn active">Download CV</a>
+              <a href="contact.html" class="btn">Contact</a>
+            </div>
 
-        <!-- Footer -->
-        <footer class="mt-8 text-center text-gray-500 text-sm">
-          <p>© 2024 All rights reserved</p>
-        </footer>
-      </div>
-
-      <!-- Main Content -->
-      <div
-        class="w-full lg:w-3/4 flex items-center justify-center bg-white relative p-6"
-      >
-        <div class="text-center">
-          <h1 class="text-3xl lg:text-5xl font-bold">I am a Designer</h1>
-          <p class="mt-4 text-gray-600">
-            100% html5 bootstrap templates Made by
-            <a class="text-blue-500" href="https://colorlib.com"
-              >colorlib.com</a
-            >
-          </p>
-          <button
-            class="mt-8 px-6 py-2 border border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white transition"
-          >
-            VIEW PORTFOLIO <i class="fas fa-arrow-right ml-2"></i>
-          </button>
-        </div>
-
-        <!-- Image on larger screens -->
-        <div class="hidden lg:block absolute right-0 bottom-0">
-          <img
-            src="fotoHome.jpeg"
-            alt="Designer image"
-            class="h-full object-cover"
-            width="400"
-            height="600"
-          />
+            <div class="social">
+              <a
+                href="https://www.linkedin.com/in/moses-mahardika-nugroho/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mosesmahardika.n"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Footer with copyright -->
+    <footer>
+      <p>&copy; 2024 Moses Mahardika Nugroho. All Rights Reserved.</p>
+      <p>
+        <a href="https://www.linkedin.com/in/moses-mahardika-nugroho/"
+          >LinkedIn</a
+        >
+        | <a href="https://www.instagram.com/mosesmahardika.n">Instagram</a>
+      </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+      var typed = new Typed(".input", {
+        strings: ["Footballer", "Student"],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
